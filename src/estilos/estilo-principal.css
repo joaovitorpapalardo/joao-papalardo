@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    background-color: #0E0B16;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+p {
+    color: #E7DFDD;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #A239CA;
+}
+
+a:hover {
+    color: #c277e0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 3.5em;   
+}
+
+.header-principal {
+    text-align: right;
+    align-items: center;
+    padding: 15px 25px 15px 0px;
+    text-justify: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+
+}
+
+.header-links a{
+    color: #A239CA;
+    padding: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+}
+
+.header-links a:hover, .header-links a:focus {
+    color: #c277e0;
+    text-decoration: overline;
+    transform: scale(1.2)translateY(-3px);
+}
+
+.joao {
+    font-size: 2em;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.joao a:hover{
+    text-decoration: none;
+}
+
+.header-lateral {
+    position: fixed;
+    height: 80%;
+    right: 0;
+    z-index: 111111;
+}
+
+.header-lateral li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header-lateral a{
+    color: #E7DFDD;
+}
+
+.secao-principal {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    height: 100vh;
+    padding: 0 10vw 10vw;
+}
+
+.textos {
+    width: 50%;
+    color: #E7DFDD;
+}
+
+.texto-animado h2 {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+.texto-animado h2::before {
+    content: "";
+    color: #E7DFDD;
+    animation: palavras 20s infinite;
+}
+
+.texto-animado h2::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid #E7DFDD;
+    right: -2px;
+    animation: cursor .9s infinite, digita 20s steps(23) infinite;
+    width: calc(100% + 8px);
+    background-color: #0E0B16;
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}
+
+@keyframes cursor {
+    0%, 50% {
+        border-left-color: #E7DFDD;
+    }
+    51%, 100% {
+        border-left-color: transparent;
+    }
+}
+
+@keyframes palavras {
+    0%, 100%{
+        content: "Olá, eu sou João Vitor";
+    }
+
+}
+
+.texto-principal {
+    width: 75%;
+    padding: 10px 0 0 0;
+    font-size: 1.2em;
+}
+
+.imagem-eu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.imagem-eu img {
+    max-width: 60%;
+    height: auto;
+    margin-top: 10vh;
+}
+
+.secao-sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10vw;
+}
+
+.secao-principal,
+.secao-sobre {
+    width: 100%;
+}
+
+
+.texto-sobre-mim {
+    width: 50%;
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.skills .textos button:hover{
+    transform: scale(1.2) translateY(-5px);
+    background: rgba(0,0,0, 0.3);
+    border-radius: 25%;
+}
+
+.icones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding-top: 3vh;
+}
+
+.icones button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 8vh;
+    padding: 20px;
+}
+
+/* -- INICIO PROJETOS -- */
+
+.projetos-container {
+    text-align: center;
+    padding: 50px 0;
+    background: #0E0B16;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; 
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card a{
+    color: #E7DFDD;
+    text-decoration: none;
+}
+
+.card a:hover{
+    color: #0E0B16;
+}
+
+.info {
+    padding: 15px;
+}
+
+#projetos h2 {
+    color: #E7DFDD;
+
+}
+
+.info h3{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+botao:hover {
+    background: #0056b3;
+}
+
+botao a:hover {
+    color: #0E0B16;
+}
+
+/* -- FOOTER -- */
+
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #E7DFDD;
+    border-top: 1px solid #493f64;
+    text-align: center;
+    z-index: 10;
+    bottom: 0;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+
+.footer .social a {
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.3s ease;
+    line-height: 60px;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-5px);
+    background: black;
+    color: #E7DFDD;
+    border-radius: 50%;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid black;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .secao-principal, .secao-sobre {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 5vh 5vw;
+        margin-top: 15vh;
+        gap: 15px;
+    }
+
+    .textos, .texto-sobre-mim {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .texto-principal {
+        width: 90%;
+        max-width: 600px;
+        padding: 5vh 5vw;
+    }
+
+    .link-sobre-mim {
+        display: none;
+    }
+
+    .navbar-toggler {
+        background: #E7DFDD;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .icones button {
+        font-size: 5vh;
+        padding: 15px;
+    }
+
+    .imagem-eu {
+        display: none;
+    }
+
+    .joao {
+        display: none;
+    }
+    
+    .projetos-container {
+        margin-bottom: 20vh;
+    }
+    
+    .grid-projetos .card .info {
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto; 
+        padding: 10px 0; 
+    }
+
+    .grid-projetos .card .info p {
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto; 
+    }
+
+    .footer .copyright {
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto; 
+        padding: 10px 0; 
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 993px) {
+    .imagem-eu {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
