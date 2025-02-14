@@ -234,7 +234,7 @@ h2 {
     text-align: center;
     padding: 50px 0;
     background: #0E0B16;
-    height: 100%;
+    height: 100vh;
     flex-grow: 1;
 }
 
@@ -380,6 +380,25 @@ botao a:hover {
     color: black;
 }
 
+/* -- EFEITO SCROLLREVEAL -- */
+
+.efeito-txt-dev, .efeito-txt-sobre, .efeito-txt-skills, .efeito-txt-projetos, .texto-principal, .link-sobre-mim,
+.imagem-eu {
+    visibility: hidden;
+}
+.efeito-txt-skills-1, .efeito-txt-skills-2, .efeito-txt-skills-3,
+.efeito-txt-skills-4, .efeito-txt-skills-5, .efeito-txt-skills-6 {
+    visibility: hidden;
+}
+
+.efeito-txt-projetos-1, .efeito-txt-projetos-2, .efeito-txt-projetos-3 {
+    visibility: hidden;
+} 
+
+
+/* -- MEDIA QUERIES -- */
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .secao-principal, .secao-sobre {
@@ -439,6 +458,7 @@ botao a:hover {
     
     .projetos-container {
         margin-bottom: 20vh;
+        height: 100%;
     }
     
     .grid-projetos .card .info {
@@ -483,6 +503,11 @@ botao a:hover {
 @media only screen and (max-width: 993px) {
     .imagem-eu {
         display: none;
+    }
+
+    .projetos-container {
+        margin-bottom: 20vh;
+        height: 100%;
     }
 }
 
