@@ -102,3 +102,37 @@ revelar.reveal('.efeito-txt-projetos-3', {
     delay: 600,
 })
 
+document.addEventListener("wheel", (event) => {
+    if (window.innerWidth <= 768) return;
+
+    event.preventDefault();
+
+    let sections = document.querySelectorAll("section, .footer");
+    let currentScroll = window.scrollY;
+    let viewportHeight = window.innerHeight;
+
+    let closestSection = sections[0];
+    let minDistance = Math.abs(closestSection.offsetTop - currentScroll);
+
+    sections.forEach((section) => {
+        let distance = Math.abs(section.offsetTop - currentScroll);
+        if (distance < minDistance) {
+            closestSection = section;
+            minDistance = distance;
+        }
+    });
+
+    let nextSection;
+    if (event.deltaY > 0) {
+        nextSection = [...sections].find(sec => sec.offsetTop > currentScroll + 10);
+    } else {
+        nextSection = [...sections].reverse().find(sec => sec.offsetTop < currentScroll - 10);
+    }
+
+    if (nextSection) {
+        window.scrollTo({
+            top: nextSection.offsetTop,
+            behavior: "smooth"
+        });
+    }
+}, { passive: false });
