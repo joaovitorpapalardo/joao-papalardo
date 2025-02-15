@@ -64,7 +64,7 @@ h2 {
 .header-links a:hover, .header-links a:focus {
     color: #c277e0;
     text-decoration: overline;
-    transform: scale(1.2)translateY(-3px);
+    transform: scale(1.2) translateY(-3px);
 }
 
 .joao {
@@ -272,6 +272,7 @@ h2 {
 
 .card a:hover{
     color: #0E0B16;
+    transform: scale(1.1) translateY(-1px);
 }
 
 .info {
@@ -291,6 +292,9 @@ h2 {
 .info p {
     font-size: 1rem;
     color: #555;
+    min-height: 60px; /* Ajuste esse valor conforme necessário */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .botao {
@@ -300,14 +304,16 @@ h2 {
     background: #007bff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
-botao:hover {
+.botao:hover {
     background: #0056b3;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
 }
 
-botao a:hover {
+.botao a:hover {
     color: #0E0B16;
 }
 
@@ -479,6 +485,10 @@ botao a:hover {
         width: 100%; 
         margin: 0 auto; 
         padding: 10px 0; 
+    }
+
+    .header-lateral {
+        display: none;
     }
 
 }
