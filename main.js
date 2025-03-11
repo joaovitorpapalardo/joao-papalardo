@@ -103,7 +103,7 @@ revelar.reveal('.efeito-txt-projetos-3', {
 })
 
 document.addEventListener("wheel", (event) => {
-    if (window.innerWidth <= 768) return;
+    if (window.innerWidth <= 768 ) return;
 
     event.preventDefault();
 
