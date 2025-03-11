@@ -100,6 +100,12 @@ h2 {
     padding: 0 10vw 10vw;
 }
 
+.link-sobre-mim:hover {
+    transition: 0.3s ease;
+    color: #c277e0;
+    text-decoration: underline;
+}
+
 .textos {
     width: 50%;
     color: #E7DFDD;
@@ -163,7 +169,7 @@ h2 {
 }
 
 .imagem-eu {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: flex-end; 
 }
@@ -495,7 +501,7 @@ h2 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
