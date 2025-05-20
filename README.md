@@ -1,4 +1,4 @@
-# 🌐 Portfólio Pessoal - João Vitor Papalardo
+# Portfólio Pessoal - João Vitor Papalardo
 
 Este repositório contém o código-fonte do meu portfólio pessoal desenvolvido em HTML, CSS, JavaScript e Bootstrap. O objetivo do site é apresentar minha trajetória como desenvolvedor web, minhas habilidades técnicas e alguns projetos que desenvolvi.
 
